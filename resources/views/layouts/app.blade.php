@@ -14,7 +14,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app" class="font-sans h-screen">
+    <div id="app" class="font-sans h-screen bg-grey-lightest">
         @include('partials.nav')
 
         @yield('content')

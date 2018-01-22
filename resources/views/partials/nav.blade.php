@@ -6,8 +6,8 @@
     </div>
     <div class="w-1/2 text-right">
         @guest
-            <a href="{{ route('login') }}" class="no-underline uppercase tracking-wide text-sm ml-4 text-grey-darker hover:text-grey-darkest">Login</a>
-            <a href="{{ route('register') }}" class="no-underline uppercase tracking-wide text-sm ml-4 text-grey-darker hover:text-grey-darkest">Register</a>
+            <a href="{{ route('login') }}" class="no-underline uppercase tracking-wide text-sm ml-4 text-grey-darker hover:text-grey-darkest {{set_active('login*', 'font-bold')}}">Login</a>
+            <a href="{{ route('register') }}" class="no-underline uppercase tracking-wide text-sm ml-4 text-grey-darker hover:text-grey-darkest {{set_active('register*', 'font-bold')}}">Register</a>
         @else
             <a href="#">{{ Auth::user()->name }}</a>
             <a href="{{ route('logout') }}"
