@@ -1,13 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-@if (session('status'))
-    <div class="fixed pin-b w-full bg-green text-white">
-        {{ session('status') }}
-    </div>
-@endif
-
 <div class="flex items-center justify-center h-9/10">
     <div class="p-8 bg-white rounded shadow-lg m-6 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 lg:max-w-md">
         <h2 class="text-grey-darkest text-2xl mb-4 text-center tracking-wide">Reset Password</h2>
