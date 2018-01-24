@@ -15,6 +15,9 @@
             <a href="{{ route('login') }}" class="no-underline uppercase tracking-wide text-sm ml-4 text-grey-darker hover:text-grey-darkest {{set_active('login*', 'font-bold')}}">Login</a>
             <a href="{{ route('register') }}" class="no-underline uppercase tracking-wide text-sm ml-4 text-grey-darker hover:text-grey-darkest {{set_active('register*', 'font-bold')}}">Register</a>
         @else
+            @if(Auth::user()->isAdmin())
+                <a href="{{ route('admin') }}" class="no-underline uppercase tracking-wide text-sm ml-4 text-grey-darker hover:text-grey-darkest {{set_active('admin*', 'font-bold')}}">Admin</a>
+            @endif
             <a href="#" class="no-underline uppercase tracking-wide text-sm ml-4 text-grey-darker hover:text-grey-darkest">{{ Auth::user()->name }}</a>
             <a href="{{ route('logout') }}"
                class="no-underline uppercase tracking-wide text-sm ml-4 text-grey-darker hover:text-grey-darkest"
